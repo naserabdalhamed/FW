@@ -1,0 +1,18 @@
+@(calForm : Form[Calculator])
+
+@import helper._
+
+@main("Calculator..") { 
+
+    <h2>sum the numbers</h2>
+    
+    @form(routes.Application.sum()) {
+        
+        @inputText(calForm("num1"))
+        @inputText(calForm("num2")) 
+        
+        <input type="submit" value="Sum">
+        
+    }
+
+}
